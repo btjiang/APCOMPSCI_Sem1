@@ -24,12 +24,12 @@ public class Lab_02
 		
 		System.out.println(" ");
 		
-		int l = 13
-		int w = 16
-		int h = 9
+		int l = 13;
+		int w = 16;
+		int h = 9;
 		int recArea = (2*l*w)+ (2*w*h) + (2*l*h);
 		
-		System.out.println(The )
+		System.out.println("The surface area of your rectangle is " + recArea);
 	    
 	}
 }
