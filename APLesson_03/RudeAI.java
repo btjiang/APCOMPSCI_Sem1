@@ -37,6 +37,17 @@ public class RudeAI
 		
 		System.out.println("How many siblings do you have, " + name + "?" );
 		
+		int siblings = keyboard.nextInt();
+		
+		System.out.println("Wow, I sure hope at least one of those " + siblings + " siblings has better genetics than you.");
+		
+		System.out.println(name + ", what do you want to be when you grow up?");
+		
+		String be = keyboard.next();
+		
+		System.out.println(be + " is a very prestigious profession, maybe you shouldn't quit your day job " + name + ".");
+		
+		System.out.println("So," + name + " you are a " + num + " year old who likes " + music + " and " + fun + "ing, and you want to be a " + be + "?! Good luck with that.");
 		
 		
 		
