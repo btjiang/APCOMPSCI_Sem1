@@ -5,6 +5,21 @@ public class ASCIItwo
 		System.out.println("               *               ");
 		System.out.println("              * *              ");
 		System.out.println("             *   *             ");
-		
-		
-	}
+		System.out.println("            *     *            ");
+		System.out.println("           *       *           ");
+		System.out.println("          *         *          ");
+		System.out.println(" * * *                 * * *   ");
+		System.out.println("   *                        *    ");
+		System.out.println("     *                    *      ");
+		System.out.println("       *                *        ");
+		System.out.println("        *             *         ");
+		System.out.println("       *       *      *        ");
+		System.out.println("      *       * *      *       ");
+		System.out.println("     *      *     *     *      ");
+		System.out.println("    *     *         *    *     ");
+		System.out.println("   *    *             *   *    ");
+		System.out.println("  *   *                 *  *   ");
+		System.out.println(" *  *                     * *  ");
+		System.out.println("  *                         *  ");
+	} 
+}
