@@ -38,6 +38,7 @@ public class  APLab_04_Receipt
 		
 		menu.receipt(item6, price6);
 		
+		
 		System.out.println();
 		
 		System.out.println("___________________________________________________");
