@@ -1,44 +1,41 @@
+import java.util.Scanner;
+
 public class  APLab_04_Receipt
 {
 	public static void main(String[]args)
 	{
-		System.out.println("<<<<<<<<<<<<<<<<<<Receipt>>>>>>>>>>>>>>>>>>");
+		
 		
 		APLab_04_Receipt menu = new APLab_04_Receipt();
 		
-		String item1 = "Cheese Sandwich";
-		double price1 = 4.50;
-		
-		menu.receipt(item1, price1);
-		
-		String item2 = "French Fries";
-		double price2 = 2.88;
-		
-		menu.receipt(item2, price2);
-		
-		String item3 = "Soda";
-		double price3 = 1.63;
-		
-		menu.receipt(item3, price3);
-		
-		System.out.println();
-		
+		Scanner kb = new Scanner(System.in);
+		System.out.println("Please enter item 1:");
+		String item1 = kb.next();
+		System.out.println("Please enter the price:");
+		double price1 = kb.nextDouble();
+		System.out.println("Please enter item 2:");
+		String item2 = kb.next();
+		System.out.println("Please enter the price:");
+		double price2 = kb.nextDouble();
+		System.out.println("Please enter item 3:");
+		String item3 = kb.next();
+		System.out.println("Please enter the price:");
+		double price3 = kb.nextDouble();
 		String item4 = "Subtotal:";
-		double price4 = 9.01;
-		
-		menu.receipt(item4, price4);
-		
+		double price4 = price1 + price2 + price3;
 		String item5 = "Tax:";
-		double price5 = 0.63;
+		double price5 = .08 * price4;
+		String item6 = "Total:";
+		double price6 = price4 + price5;
 		
+		System.out.println("<<<<<<<<<<<<<<<<<<Receipt>>>>>>>>>>>>>>>>>>");
+		menu.receipt(item1, price1);
+		menu.receipt(item2, price2);
+		menu.receipt(item3, price3);
+		menu.receipt(item4, price4);
 		menu.receipt(item5, price5);
-		
-		String item6 = "Total";
-		double price6 = 9.64;
-		
 		menu.receipt(item6, price6);
-		
-		
+	
 		System.out.println();
 		
 		System.out.println("___________________________________________________");
