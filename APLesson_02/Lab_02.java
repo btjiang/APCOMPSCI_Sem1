@@ -10,6 +10,8 @@ public class Lab_02
 		System.out.println(a + " multiplied by " + b + " is "  + product);
 		
 		System.out.println(" ");
+		String name = "Brittany Jiang";
+		System.out.println(name);
 		
 		String first = "1234";
 		String second = " Mulberry Lane ";
