@@ -5,17 +5,17 @@ public class Interest
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
-		Interest dollar = new Interest
+		Interest done = new Interest();
 		System.out.println("Please enter your interest rate:");
-		double r = kb.nextDouble();
+		double rate = kb.nextDouble();
 		System.out.println("Please enter the original amount of your loan:");
-		double p = kb.nextDouble();
+		double principal = kb.nextDouble();
 		System.out.println("Please enter the number of times your loan is compounded per year:");
-		double n = kb.nextDouble();
+		double number = kb.nextDouble();
 		System.out.println("Please enter the total life of your loan in years:");
-		double t = kb.nextDouble();
-		double tot = dollar.money(r,p,t,n);
-		System.out.println("Your monthly payment will be %10.2f", tot);
+		double time = kb.nextDouble();
+		double tot = done.money(rate, principal, number, time);
+		System.out.println("Your monthly payment will be "+ tot);
 		
 	}
 	
