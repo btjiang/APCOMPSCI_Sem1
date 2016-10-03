@@ -2,20 +2,28 @@ import java.util.Scanner;
 
 public class Vol
 {
-	public static void main
+	
+	static int side;
+	static int volume;
+	
+	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
-		Vol cube = new Vol();
 		System.out.println("Please enter the side length of your cube");
-		side1 = kb.nextDouble();
-		double total = cube.calcVolume(side1);
-		System.out.println("Your volume is " + total);
+		side = kb.nextInt();
+		calcVolume();
+		print();
 	
 	}
 	
-	public static void calcVolume(side)
+	public static void calcVolume()
 	{
-		return (side * side * side);
+		volume = (side * side * side);
 	}
 	
+	public static void print()
+	{
+		System.out.println("Your volume is " + volume);
+	}
 	
+}
