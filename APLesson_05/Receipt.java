@@ -1,10 +1,11 @@
-import java.util.Scanner
+import java.util.Scanner;
 
 public class Receipt
 {
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
+		Receipt menu = new Receipt();
 		System.out.println("Please enter item 1:");
 		String item1 = kb.next();
 		System.out.println("Please enter the price:");
@@ -18,22 +19,28 @@ public class Receipt
 		System.out.println("Please enter the price:");
 		double price3 = kb.nextDouble();
 		System.out.println("Please enter item 4:");
+		String item4 = kb.next();
+		System.out.println("Please enter the price:");
 		double price4 = kb.nextDouble();
 		String item5 = "Subtotal:";
 		double price5 = price1 + price2 + price3 + price4;
-		String item6 = "Discount";
-		double add = total * discount;
-		double subtotal = total + add;
-		double tax = .08 * subtotal 
+		String item6 = "Discount:";
+		double price6 = price5 * dis(price5);
+		String item7 = "Tax:";
+		double price7 = .08 * (price5 - price6);
+		String item8 = "Total:";
+		double price8 = price5 - price6 + price7; 
 		
 		
 		System.out.println("<<<<<<<<<<<<<<<<<<Receipt>>>>>>>>>>>>>>>>>>");
-		menu.receipt(item1, price1);
-		menu.receipt(item2, price2);
-		menu.receipt(item3, price3);
-		menu.receipt(item4, price4);
-		menu.receipt(item5, price5);
-		menu.receipt(item6, price6);
+		menu.format(item1, price1);
+		menu.format(item2, price2);
+		menu.format(item3, price3);
+		menu.format(item4, price4);
+		menu.format(item5, price5);
+		menu.format(item6, price6);
+		menu.format(item7, price7);
+		menu.format(item8, price8);
 	
 		System.out.println();
 		
@@ -43,19 +50,19 @@ public class Receipt
 		
 	}
 	
-	public static double discount()
+	public static double dis(double price5)
 	{
-		String discount = "";
-		if (total >= 2000)
+		double dis = 0;
+		if (price5 >= 2000)
 		{
-			discount = .15;
+			dis = .15;
 		}
 		
-		if (total <= 2000)
+		if (price5 <= 2000)
 		{
-			discount = 0;
+			dis = 0;
 		}
-		
+		return dis;
 	}
 	
 	public void format(String item, double price)
