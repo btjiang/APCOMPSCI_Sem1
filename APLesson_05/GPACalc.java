@@ -28,31 +28,29 @@ public class GPACalc
 	
 	public static double points(String name)
 	{
-		double points = 0;
+		
 		if (name.equals("A"))
 		{
-			points = 4.0;
+			return 4.0;
 		}
 		
 		if (name.equals("B"))
 		{
-			points = 3.0;
+			return 3.0;
 		}
 		
 		if (name.equals("C"))
 		{
-			points = 2.0;
+			return 2.0;
 		}
 		
 		if (name.equals("D"))
 		{
-			points = 1.0;
+			return 1.0;
 		}
-		
-		if (name.equals("F"))
+		else
 		{
-			points = 0.0;
+			return 0;
 		}
-		return points;
 	}
 }
