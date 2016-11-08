@@ -21,7 +21,7 @@ public class Song
 	{
 		for(int i = 0; i < number; i++)
 		{
-			System.out.println(word);
+			System.out.print(word + "\t");
 		}
 	}
 }
