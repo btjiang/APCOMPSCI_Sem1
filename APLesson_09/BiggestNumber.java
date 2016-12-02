@@ -1,22 +1,19 @@
-public class GetOdds
+public class BiggestNumber
 {
 	static int[] Array = new int[10] ;
 	
 	public static void main(String[]args)
 	{
 		fillArray();
-		System.out.println("For the following numbers... ");
+		System.out.println("For the following numbers...");
 		printArray();
-		System.out.print("\n\n");
-		getOdds();
-		System.out.println("are odd numbers");
-
+		System.out.println("\nThe biggest number is " + getBiggest());
 		
 	}
 	
 	public static void fillArray()
 	{
-		for(int i = 0; i < 10; i++)
+		for(int i = 0; i < Array.length; i++)
 		{
 			Array[i] = 1 + (int)((Math.random() * 100));
 		}
@@ -24,21 +21,23 @@ public class GetOdds
 	
 	public static void printArray()
 	{
-		for(int x : Array)
+		for(int x:Array)
 		{
 			System.out.print(x + " ");
 		}
 	}
 	
-	public static void getOdds()
+	public static int getBiggest()
 	{
-		for (int num : Array)
+		int max=0;
+		for(int num:Array)
 		{
-			if(num%2 == 1)
+			if (num>max)
 			{
-				System.out.print(num + " ");
+				max = num;
 			}
 			
 		}
+		return max;
 	}
 }
