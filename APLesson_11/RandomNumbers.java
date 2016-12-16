@@ -6,9 +6,19 @@ public class RandomNumbers
 		
 		for ( int i = 0; i < nums.length; i++)
 		{
-			nums[i][i] = 1 + (int)((Math.random() * 100));
+		for ( int j = 0; j < nums[i].length; j++)
+		{
+			nums[i][j] = 1 + (int)((Math.random() * 100));
+		}
 		}
 		
-		for ( int i = 0; )
+		for ( int i = 0; i < nums.length; i++)
+		{
+		for ( int j = 0; j < nums[i].length; j++)
+		{
+			System.out.print(nums[i][j]+"\t");
+		}
+		System.out.println("");
+		}
 	}
 }
