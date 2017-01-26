@@ -14,7 +14,7 @@ public class Miles2
 	
 	MilesPerHour miles = new MilesPerHour(d, h, m);
 	System.out.print(miles.getDistance() + " miles in " + miles.getHours() + " hours and " + miles.getMinutes() + " minutes = " + miles.getMPH() + " mph.");
-	miles.setValues(d,h,m);
+	miles.setValues(4,4,4);
 	System.out.print("\n" + miles.getDistance() + " miles in " + miles.getHours() + " hours and " + miles.getMinutes() + " minutes = " + miles.getMPH() + " mph.");
 	}
 }
