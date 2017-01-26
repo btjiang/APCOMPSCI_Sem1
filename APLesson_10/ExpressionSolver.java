@@ -21,11 +21,11 @@ public class ExpressionSolver
 			{
 				if (eqa.get(i).equals("*"))
 				{
-					eqa.set(i, " " + (Integer.parseInt(eqa.get(i-1)) * Integer.parseInt(eqa.get(i+1))));
+					eqa.set(i, "" + (Integer.parseInt(eqa.get(i-1)) * Integer.parseInt(eqa.get(i+1))));
 				}
 				else
 				{
-					eqa.set(i, " " + (Integer.parseInt(eqa.get(i-1)) / Integer.parseInt(eqa.get(i+1))));
+					eqa.set(i, "" + (Integer.parseInt(eqa.get(i-1)) / Integer.parseInt(eqa.get(i+1))));
 				}
 				eqa.remove(i-1);
 				eqa.remove(i);
@@ -40,11 +40,11 @@ public class ExpressionSolver
 			{
 				if (eqa.get(i).equals("+"))
 				{
-					eqa.set(i, " " + (Integer.parseInt(eqa.get(i-1)) + Integer.parseInt(eqa.get(i+1))));
+					eqa.set(i, "" + (Integer.parseInt(eqa.get(i-1)) + Integer.parseInt(eqa.get(i+1))));
 				}
 				else
 				{
-					eqa.set(i, " " + (Integer.parseInt(eqa.get(i-1)) - Integer.parseInt(eqa.get(i+1))));
+					eqa.set(i, "" + (Integer.parseInt(eqa.get(i-1)) - Integer.parseInt(eqa.get(i+1))));
 				}
 				eqa.remove(i-1);
 				eqa.remove(i);
