@@ -10,18 +10,18 @@ public class Human
 		eyes = "";
 		skin = "";
 	}
-	public Human(h,e,s)
-	{
-		hair = h;
-		eyes = e;
-		skin = s;
-	}
-	
-	public void setHES(hair, eyes, skin)
+	public Human(hair,eyes,skin)
 	{
 		hair = hair;
 		eyes = eyes;
 		skin = skin;
+	}
+	
+	public void setHES(h, e, s)
+	{
+		hair = h;
+		eyes = e;
+		skin = s;
 		
 	}
 	
