@@ -4,20 +4,14 @@ public class Human
 	static private String eyes;
 	static private String skin;
 	
-	public Human()
+	public Human(String hair, String eyes, String skin)
 	{
-		hair = "";
-		eyes = "";
-		skin = "";
-	}
-	public Human(hair,eyes,skin)
-	{
-		hair = hair;
-		eyes = eyes;
-		skin = skin;
+		this.hair = hair;
+		this.eyes = eyes;
+		this.skin = skin;
 	}
 	
-	public void setHES(h, e, s)
+	public void setHES(String h, String e, String s)
 	{
 		hair = h;
 		eyes = e;

@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class HumanDriver
 {
@@ -15,7 +15,7 @@ public class HumanDriver
 		
 		Human drive = new Human(hair, eyes, skin);
 		System.out.println("My info...\nHair:\t" + drive.getHair() + "\nEyes:\t" + drive.getEyes() + "\nSkin:\t" + drive.getSkin());
-		drive.setHES(black, brown, white);
+		drive.setHES("black", "brown", "white");
 		System.out.println("Friend's info...\nHair:\t" + drive.getHair() + "\nEyes:\t" + drive.getEyes() + "\nSkin:\t" + drive.getSkin());
 	}
 }
