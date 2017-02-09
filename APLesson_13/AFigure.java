@@ -1,16 +1,14 @@
 public class AFigure extends ToyInventory
 {
-	private  String name;
-	
 	
 		public AFigure()
 		{
-		name = "";
+			super();
 		}
 	
 		public AFigure(String n)
 		{
-		name = n;
+		super(n);
 		}
 		
 		public String getType()
@@ -18,9 +16,6 @@ public class AFigure extends ToyInventory
 			return "Action Figure";
 		}
 		
-		public String toString()
-		{
-			return name; 
-		}
+	
 	
 }
