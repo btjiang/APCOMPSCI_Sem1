@@ -1,6 +1,14 @@
 public abstract class Console extends GameSystem
 {
 	String Contoller;
+	public Console()
+	{
+		super();
+	}
+	public Console(String system)
+	{
+		super(system);
+	}
 	
 	public abstract String getController();
 	
