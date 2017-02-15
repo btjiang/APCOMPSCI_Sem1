@@ -1,7 +1,7 @@
-public class Walkup
+public class Walkup extends TicketSuperclass
 {
 	public int getPrice()
 	{
-		return 50.00;
+		return 50;
 	}
 }

@@ -1,23 +1,18 @@
-public class TicketSuperclass
+public abstract class TicketSuperclass
 {
 	int SerialNumber;
-	int Price;
 	
 	public TicketSuperclass()
 	{
-		SerialNumber = 0;
-		Price = 0;
+		SerialNumber = 1 + (int)(Math.random()*9999999);
 	}
 	
 	public int getSerialNo()
 	{
-		return 1 + (int)(Math.random()*9999999);
+		return SerialNumber;
 	}
 	
-	public abstract int getPrice()
-	{
-		return Price;
-	}
+	public abstract int getPrice();
 	
 	public String toString()
 	{

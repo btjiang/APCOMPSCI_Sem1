@@ -11,12 +11,10 @@ public class Advance extends TicketSuperclass
 	{
 		if (daysLeft >= 10)
 		{
-			return 30.00; 
+			return 30; 
 		}
 		
-		else
-		{
-			return 40.00;
-		}
+		return 40;
+		
 	}
 }
