@@ -1,9 +1,10 @@
-public class Toyota extends Car 
+public class Toyota implements Location
 {
 	private double x, y;
 	
 	public Toyota(String sos)
 	{
+		ArrayList<String> location = new ArrayList<String>();
 		x = Double.parseDouble(sos.split(",")[0]);
 		y = Double.parseDouble(sos.split(",")[1]);
 		
@@ -11,7 +12,7 @@ public class Toyota extends Car
 	
 	public int getID()
 	{
-		return ID;
+		return 1 + (int)(Math.random()*999999);
 	}
 	
 	public void move(double c, double d)
