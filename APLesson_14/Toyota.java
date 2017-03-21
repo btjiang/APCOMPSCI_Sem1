@@ -1,12 +1,13 @@
+import java.util.ArrayList;
 public class Toyota implements Location
 {
 	private double x, y;
 	
 	public Toyota(String sos)
 	{
-		ArrayList<String> location = new ArrayList<String>();
-		x = Double.parseDouble(sos.split(",")[0]);
-		y = Double.parseDouble(sos.split(",")[1]);
+		ArrayList<String> l = new ArrayList<String>(Arrays.asList(sos.split(", ")));
+		x = Double.parseDouble(l.split(",")(0));
+		y = Double.parseDouble(l.split(",")(1));
 		
 	}
 	
