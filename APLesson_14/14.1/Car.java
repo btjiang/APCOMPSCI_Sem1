@@ -5,6 +5,8 @@ public abstract class Car implements Location2
 	double[] location;
 	public Car()
 	{
+		x=0;
+		y=0;
 		ID = 1 + (int)(Math.random()*999999);
 	}
 	

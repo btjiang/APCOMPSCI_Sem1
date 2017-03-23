@@ -2,10 +2,10 @@ public class GMC2 extends Car
 {
 	private double x, y;
 	
-	public GMC(double a, double b)
+	public GMC(double x, double y)
 	{
 		super();
-		this.move(a, b);
+		this.move(x, y);
 	}
 	
 	
