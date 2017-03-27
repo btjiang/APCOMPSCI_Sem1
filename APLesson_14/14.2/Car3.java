@@ -1,10 +1,10 @@
-public abstract class Car implements Location2
+public abstract class Car3 implements Location3
 {
 	int ID;
 	double x, y;
 	double[] location;
 	
-	public Car()
+	public Car3()
 	{
 		x=0;
 		y=0;
