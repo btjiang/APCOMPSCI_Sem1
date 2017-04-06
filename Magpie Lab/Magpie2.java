@@ -86,9 +86,27 @@ public class Magpie2
 						--return psn
 
 				Otherwise, search for goal in phrase from psn + 1 forward */
-		statement = statement.trim.toLowerCase();
-		int psn = statement.indexOf(" " + goal + " ", startPost);
+		String phrase = statement.trim().toLowerCase();
+		goal = goal.toLowerCase();
+		int psn = phrase.indexOf(goal, startPost);
 		while(psn >= 0)
+		{
+			String before = " ", after = " ";
+			if (psn > 0)
+			{
+				before = phrase.substring(psn-1, psn);
+			}
+			if (psn + goal.length() < phrase.length())
+			{
+				after = phrase.substring(psn + goal.length(), psn + goal.length() + 1);
+			}
+			
+			if (before.compareTo("a")<0||before.compareTo("z")>0&&after.compareTo("a")<0||after.compareTo("z")>0)
+			{
+				return psn;
+			}
+			psn = phrase.indexOf(goal, psn + 1); 
+		}
 			
 		return -1;
 

@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 public class Toyota implements Location
 {
 	private double x, y;
@@ -6,8 +6,8 @@ public class Toyota implements Location
 	public Toyota(String sos)
 	{
 		ArrayList<String> l = new ArrayList<String>(Arrays.asList(sos.split(", ")));
-		x = Double.parseDouble(l.split(",")(0));
-		y = Double.parseDouble(l.split(",")(1));
+		x = Double.parseDouble(l.get(0));
+		y = Double.parseDouble(l.get(1));
 		
 	}
 	
