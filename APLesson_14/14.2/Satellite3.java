@@ -14,13 +14,27 @@ public class Satellite3
 
         String printout = "\n\n" +
                "==========================" + "\nStarting locations...";
+
+        for (Location3 l : locate)
+       {
+           printout += "\nLocation for " + l.getID() + ": (" + getLocation(l.getLoc()) + ")";
+       }
+
+        printout += "\n\n" + "==========================" +
+                   "\nDistance from home...";
+
+        for (Location3 l : locate)
+       {
+           printout += "\nDistance for " + l.getID() + ": (" + getDistance(l.getLoc(), home)+ ")";
+       }
+	    printout += "\n\n" + "==========================";
 		for (Location3 l : locate)
 		{
 			double xMove = Math.round((1+ (Math.random()*100))*100.00)/100.00;
 			double yMove = Math.round((1+ (Math.random()*100))*100.00)/100.00;
-			printout += "After " + l.getID() + " Moved (" + getLocation(l.getLoc()) + ")";
+			printout += "\nAfter " + l.getID() + " Moved (" + xMove + "," + yMove +")";
 			(l).move(xMove, 2*yMove);
-			printout += "\nNew Location: (" + getLocation(l.getLoc()) + ")\n\n";
+			printout += "\nNew Location: (" + getLocation(l.getLoc()) + ")\n";
 		}
       
 
