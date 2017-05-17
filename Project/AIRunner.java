@@ -7,9 +7,11 @@ public class AIRunner
 	{
 		AI battle = new AI();
 		
-		System.out.println (battle.getHello());
+		System.out.println (battle.Hello());
+		System.out.println(battle.inititate());
 		Scanner ship = new Scanner (System.in);
 		String guess = ship.nextLine();
+		
 		
 		while (!statement.equals("Bye"))
 		{

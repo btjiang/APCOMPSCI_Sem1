@@ -41,6 +41,7 @@ public class PictureTester
 	  beach.keepOnlyBlue();
 	  beach.explore();
   }
+  
   /** Method to test the collage method */
   public static void testCollage()
   {
