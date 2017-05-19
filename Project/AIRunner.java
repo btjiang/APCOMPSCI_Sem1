@@ -15,8 +15,8 @@ public class AIRunner
 		
 		while (!statement.equals("Bye"))
 		{
-			System.out.println (maggie.getResponse(statement));
-			statement = in.nextLine();
+			System.out.println (battle.getResponse(statement));
+			statement = ship.nextLine();
 		}
 	}
 
