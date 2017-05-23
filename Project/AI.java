@@ -2,6 +2,11 @@ import java.util.Scanner;
 
 public class AI 
 {
+	int [] OurShips = new int[15];
+	int [] OppShips = new int[15];
+	static int healthload = 6;
+	static int healthCount;
+	
 	public Hello()
 	{
 		return "Hello, welcome to Battleship";
