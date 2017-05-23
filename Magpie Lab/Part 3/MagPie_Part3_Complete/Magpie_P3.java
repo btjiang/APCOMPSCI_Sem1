@@ -282,11 +282,12 @@ public class Magpie_P3
 		return randomResponses [r.nextInt(randomResponses.length)];
 	}
 	
-	private String [] randomResponses = {"Interesting, tell me more",
+	private String [] randomResponses =
+	{		
+			"Interesting, tell me more",
 			"Hmmm.",
 			"Do you really think so?",
 			"You don't say.",
-			//  All you need to do is add lines here
 			"Gee wilikers",
 			"Is it getting hot in here?",
 			"So, would you like to go for a walk?",

@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Magpie3
 {
 	/** Get a default greeting @return a greeting*/
@@ -36,6 +38,17 @@ public class Magpie3
 			response = "Tell me more about your family.";
 		}
 		
+			else if(findKeyword(statement, "cat")>= 0||findKeyword(statement, "dog") >= 0
+			||findKeyword(statement, "fish") >= 0||findKeyword(statement, "turtle")>= 0)
+			{
+				response = "Tell me more about your pet";
+			}
+			
+		else if(findKeyword(statement, "Robinette")>= 0)
+		{
+			response = "He sounds like a pretty dank teacher";
+		}
+		
 		else if (findKeyword(statement, "I want to", 0) >= 0)
 		{
 			response = transformIWantToStatement(statement);
@@ -46,7 +59,7 @@ public class Magpie3
 			response = transformIWantStatement(statement);
 		}
 
-		else
+		else if
 		{
 
 			int psn = findKeyword(statement, "you", 0);
@@ -58,6 +71,10 @@ public class Magpie3
 			}
 		}
 		
+		else 
+		{
+			response = getRandomResponse();
+		}
 
 		/** Exercise_03(Final)
 		 * ==================================================
@@ -197,14 +214,18 @@ private String transformYouMeStatement(String statement)
 			String before = " ", after = " ";
 			if (psn > 0)
 			{
-				before = phrase.substring(psn-1, psn);
+				before = phrase.substring(psn - 1, psn);
 			}
 			if (psn + goal.length() < phrase.length())
 			{
-				after = phrase.substring(psn + goal.length(), psn + goal.length() + 1);
+				after = phrase.substring(
+						psn + goal.length(),
+						psn + goal.length() + 1);
 			}
-			
-			if (before.compareTo("a")<0||before.compareTo("z")>0&&after.compareTo("a")<0||after.compareTo("z")>0)
+			if (((before.compareTo("a") < 0) || (before
+					.compareTo("z") > 0))
+					&& ((after.compareTo("a") < 0) || (after
+							.compareTo("z") > 0)))
 			{
 				return psn;
 			}
@@ -222,26 +243,22 @@ private String transformYouMeStatement(String statement)
 		return findKeyword(statement, goal, 0);
 	}
 
-	/** getRandomResponse() method
-	 * =============================================================*/
-	/** Pick a default response to use if nothing else fits.
-	 * 	@return a non-committal string*/
-	private String getRandomResponse()
+	private String getRandomResponse ()
 	{
-		final int NUMBER_OF_RESPONSES = 4;
-		double r = Math.random();
-		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
-		String response = "";
+		Random r = new Random ();
+		return response [r.nextInt(response.length)];
+	}
+	
+	private String [] response = 
+	{		
+			"Interesting, tell me more"
+			"Hmmm."
+			"Do you really think so?",
+			"You don't say.",
 		
-		if (whichResponse == 0)
-			response = "Interesting, tell me more.";
-		else if (whichResponse == 1)
-			response = "Hmmm.";
-		else if (whichResponse == 2)
-			response = "Do you really think so?";
-		else if (whichResponse == 3)
-			response = "You don't say.";
-
-		return response;
+			"Gee wilikers",
+			"Is it getting hot in here?",
+			"So, would you like to go for a walk?",
+			"Could you say that again?"
 	}
 }
