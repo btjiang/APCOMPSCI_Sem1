@@ -26,6 +26,13 @@ public class PictureTester
     caterpillar.explore();
   }
   
+   public static void testMirrorVerticalRightToLeft()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
+  }
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -34,14 +41,37 @@ public class PictureTester
     temple.mirrorTemple();
     temple.explore();
   }
-  public static void testkeepOnlyBlue()
+ // public static void testkeepOnlyBlue()
+  //{
+//	  Picture beach = new Picture("beach.jpg");
+//	  beach.explore();
+//	  beach.keepOnlyBlue();
+//	  beach.explore();
+//  }
+  
+ // public static void testNegate()
+  //{
+	//  Picture beach = new Picture("beach.jpg");
+//	  beach.explore();
+	//  beach.Negate();
+//	  beach.explore();
+  //}
+  
+ // public static void testgrayscale()
+  //{
+//	   Picture beach = new Picture("beach.jpg");
+//	  beach.explore();
+//	  beach.grayscale();
+	//  beach.explore();
+  //}
+  
+    public static void testfixUnderwater()
   {
-	  Picture beach = new Picture("beach.jpg");
+	   Picture water = new Picture("water.jpg");
 	  beach.explore();
-	  beach.keepOnlyBlue();
+	  beach.fixUnderwater();
 	  beach.explore();
   }
-  
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -66,12 +96,12 @@ public class PictureTester
     // and comment out the ones you don't want
     // to run
     //testZeroBlue();
-    testkeepOnlyBlue();
+    //testkeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
-    //testGrayscale();
-    //testFixUnderwater();
+    //testgrayscale();
+    //testfixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
     //testMirrorArms();
