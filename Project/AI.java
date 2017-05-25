@@ -105,57 +105,7 @@ public class AI
 	
 	public String getResponse(String statement)
 	{
-		String response = "";
-		statement = statement.trim();
-		 if (statement.length() == 0)
-		 {
-			 return "Say Something, please.";
-		 }
 		
-		else if (findKeyword(statement, "no") >= 0)
-		{
-			response = "Why so negative?";
-		}
-		else if (findKeyword(statement, "mother") >= 0
-				|| findKeyword(statement, "father") >= 0
-				|| findKeyword(statement, "sister") >= 0
-				|| findKeyword(statement, "brother") >= 0)
-		{
-			response = "Tell me more about your family.";
-		}
-		
-		else if (findKeyword(statement, "I want to", 0) >= 0)
-		{
-			response = transformIWantToStatement(statement);
-		}
-		
-		else if (findKeyword(statement, "I want", 0) >= 0)
-		{
-			response = transformIWantStatement(statement);
-		}
-
-		else
-		{
-
-			int psn = findKeyword(statement, "you", 0);
-
-			if (psn >= 0 && findKeyword(statement, "me", psn) >= 0)
-			{
-				response = transformYouMeStatement(statement);
-			}
-			else
-			{psn = findKeyword(statement, "i", 0);
-
-				if (psn >= 0 && findKeyword(statement, "you", psn) >= 0)
-				{
-					response = transformIYouStatement(statement);
-				}
-				else
-				{
-					response = getRandomResponse();
-				}
-			}
-		}
 		return response;
 	}
 	
