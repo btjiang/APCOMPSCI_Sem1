@@ -13,7 +13,7 @@ public class AIRunner
 		String guess = ship.nextLine();
 		
 		
-		while (!statement.equals("Bye"))
+		while (!statement.equals("Game Over"))
 		{
 			System.out.println (battle.getResponse(statement));
 			statement = ship.nextLine();
