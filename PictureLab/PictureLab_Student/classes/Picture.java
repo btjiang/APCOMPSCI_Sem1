@@ -111,92 +111,143 @@ public class Picture extends SimplePicture
 //	  }
  // }
   
-  public void Negate()
-  {
-	  Pixel[][] pixels = this.getPixels2D();
-	  for(Pixel[] rowArray : pixels)
-	  {
-		  for(Pixel pixelObj : rowArray)
-		  {
-			pixelObj.setBlue(255- pixelObj.getBlue());
-			pixelObj.setRed(255 - pixelObj.getRed() );
-			 pixelObj.setGreen(255 - pixelObj.getGreen());
-		  }
-	  }
-  }
+ // public void Negate()
+ // {
+//	  Pixel[][] pixels = this.getPixels2D();
+//	  for(Pixel[] rowArray : pixels)
+//	  {
+//		  for(Pixel pixelObj : rowArray)
+//		  {
+//			pixelObj.setBlue(255- pixelObj.getBlue());
+//			pixelObj.setRed(255 - pixelObj.getRed() );
+//			 pixelObj.setGreen(255 - pixelObj.getGreen());
+//		  }
+//	  }
+//  }
   
   
   
-   public void grayscale()
-  {
-	  Pixel[][] pixels = this.getPixels2D();
-	  for(Pixel[] rowArray : pixels)
-	  {
-		  for(Pixel pixelObj : rowArray)
-		  {
-			pixelObj.setBlue((pixelObj.getBlue()+pixelObj.getRed()+pixelObj.getGreen())/3);
-			pixelObj.setRed((pixelObj.getBlue()+pixelObj.getRed()+pixelObj.getGreen())/3);
-			 pixelObj.setGreen((pixelObj.getBlue()+pixelObj.getRed()+pixelObj.getGreen())/3);
-		  }
-	  }
-  }
+ //  public void grayscale()
+ // {
+//	  Pixel[][] pixels = this.getPixels2D();
+//	  for(Pixel[] rowArray : pixels)
+//	  {
+//		  for(Pixel pixelObj : rowArray)
+//		  {
+//			pixelObj.setBlue((pixelObj.getBlue()+pixelObj.getRed()+pixelObj.getGreen())/3);
+//			pixelObj.setRed((pixelObj.getBlue()+pixelObj.getRed()+pixelObj.getGreen())/3);
+//			 pixelObj.setGreen((pixelObj.getBlue()+pixelObj.getRed()+pixelObj.getGreen())/3);
+//		  }
+//	  }
+ // }
   
-  public void fixUnderwater()
-  {
-	  Pixel[][] pixels = this.getPixels2D();
-	  for(Pixel[] rowArray : pixels)
-	  {
-		  for(Pixel pixelObj : rowArray)
-		  {
-			pixelObj.setBlue(2*pixelObj.getBlue()/3);
-			pixelObj.setRed(2*pixelObj.getRed()/3 );
-			pixelObj.setGreen(2* pixelObj.getGreen()/3);
-		  }
-	  }
-  }
+//  public void fixUnderwater()
+ // {
+//	  Pixel[][] pixels = this.getPixels2D();
+//	  for(Pixel[] rowArray : pixels)
+//	  {
+//		  for(Pixel pixelObj : rowArray)
+//		  {
+//			pixelObj.setBlue(2*pixelObj.getBlue()/3);
+//			pixelObj.setRed(2*pixelObj.getRed()/3 );
+//			pixelObj.setGreen(2* pixelObj.getGreen()/3);
+//		  }
+//	  }
+//  }
   
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
     * from left to right */
-  public void mirrorVertical()
-  {
-    Pixel[][] pixels = this.getPixels2D();
-    Pixel leftPixel = null;
-    Pixel rightPixel = null;
-    int width = pixels[0].length;
-    for (int row = 0; row < pixels.length; row++)
-    {
-      for (int col = 0; col < width / 2; col++)
-      {
-        leftPixel = pixels[row][col];
-        rightPixel = pixels[row][width - 1 - col];
-        rightPixel.setColor(leftPixel.getColor());
-      }
-    } 
-  }
-  public void mirrorVerticalRightToLeft()
-  {
-    Pixel[][] pixels = this.getPixels2D();
-    Pixel leftPixel = null;
-    Pixel rightPixel = null;
-    int width = pixels[0].length;
-    for (int row = 0; row < pixels.length; row++)
-    {
-      for (int col = 0; col < width / 2; col++)
-      {
-        leftPixel = pixels[row][col];
-        rightPixel = pixels[row][width - 1 - col];
-        leftPixel.setColor(leftPixel.getColor());
-      }
-    } 
-  }
+//  public void mirrorVertical()
+ // {
+//    Pixel[][] pixels = this.getPixels2D();
+//    Pixel leftPixel = null;
+//    Pixel rightPixel = null;
+//    int width = pixels[0].length;
+//    for (int row = 0; row < pixels.length; row++)
+//    {
+//      for (int col = 0; col < width / 2; col++)
+ //     {
+ //       leftPixel = pixels[row][col];
+//        rightPixel = pixels[row][width - 1 - col];
+//        rightPixel.setColor(leftPixel.getColor());
+//      }
+//    } 
+ // }
+ // public void mirrorVerticalRightToLeft()
+//  {
+ //   Pixel[][] pixels = this.getPixels2D();
+//    Pixel leftPixel = null;
+//    Pixel rightPixel = null;
+//    int width = pixels[0].length;
+//    for (int row = 0; row < pixels.length; row++)
+//    {
+ //     for (int col = 0; col < width / 2; col++)
+ //     {
+//        leftPixel = pixels[row][col];
+//        rightPixel = pixels[row][width - 1 - col];
+//        leftPixel.setColor(leftPixel.getColor());
+ //     }
+//    } 
+//  }
   
-   public static void testMirrorVertical()
+// public void mirrorHorizontal()
+//  {
+ //   Pixel[][] pixels = this.getPixels2D();
+//    Pixel topPixel = null;
+//    Pixel bottomPixel = null;
+ //   int height = pixels.length;
+//    for (int row = 0; row < height/2; row++)
+ //   {
+//      for (int col = 0; col <pixels[0].length; col++)
+ //     {
+ //       topPixel = pixels[row][col];
+ //       bottomPixel = pixels[height - 1 - row][col];
+ //       bottomPixel.setColor(bottomPixel.getColor());
+ //    }
+ //   } 
+//  }
+  
+//   public void mirrorHorizontalBotToTop()
+//  {
+//    Pixel[][] pixels = this.getPixels2D();
+//    Pixel topPixel = null;
+ //   Pixel bottomPixel = null;
+ //   int height = pixels.length;
+//    for (int row = 0; row < height/2; row++)
+ //   {
+//      for (int col = 0; col <pixels[0].length; col++)
+ //     {
+ //       topPixel = pixels[row][col];
+ //       bottomPixel = pixels[height - 1 - row][col];
+  //      topPixel.setColor(bottomPixel.getColor());
+ //     }
+ //   } 
+ // }
+  
+  public void mirrorDiagonal()
   {
-    Picture caterpillar = new Picture("caterpillar.jpg");
-    caterpillar.explore();
-    caterpillar.mirrorVertical();
-    caterpillar.explore();
+	Pixel[][] pixels = this.getPixels2D();
+    Pixel topRightPixel = null;
+    Pixel bottomLeftPixel = null;
+    int maxLength; 
+	if(pixels.length < pixels[0].length)
+	{
+		maxLength = pixels.length;
+	}
+	else 
+	{
+		maxLength = pixels[0].length;
+	}
+    for (int row = 0; row < maxLength; row++)
+    {
+      for (int col = 0; col <maxLength; col++)
+      {
+        topRightPixel = pixels[col][row];
+        bottomLeftPixel = pixels[row][col];
+        bottomLeftPixel.setColor(topRightPixel.getColor());
+      }
+    } 
   }
   
   
@@ -215,15 +266,36 @@ public class Picture extends SimplePicture
       // loop from 13 to just before the mirror point
       for (int col = 13; col < mirrorPoint; col++)
       {
-        
+        count++;
         leftPixel = pixels[row][col];      
         rightPixel = pixels[row]                       
                          [mirrorPoint - col + mirrorPoint];
         rightPixel.setColor(leftPixel.getColor());
       }
     }
+	
+	System.out.println(count);
   }
   
+  public void mirrorArms()
+  {
+	int mirrorPoint = 196;
+    Pixel upPixel = null;
+    Pixel downPixel = null;
+   
+    Pixel[][] pixels = this.getPixels2D();
+    
+    for (int row = 163; row < mirrorPoint; row++)
+    {
+      for (int col = 112; col < 168; col++)
+      {
+      
+        upPixel = pixels[row][col];      
+        downPixel = pixels[mirrorPoint - row + mirrorPoint][col];
+        downPixel.setColor(upPixel.getColor());
+      }
+    }
+  }
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the
     * current picture
@@ -268,7 +340,7 @@ public class Picture extends SimplePicture
     this.copy(flowerNoBlue,300,0);
     this.copy(flower1,400,0);
     this.copy(flower2,500,0);
-    this.mirrorVertical();
+    //this.mirrorVertical();
     this.write("collage.jpg");
   }
   
@@ -305,19 +377,24 @@ public class Picture extends SimplePicture
    */
   public static void main(String[] args) 
   {
-    Picture water = new Picture("water.jpg");
+   // Picture water = new Picture("water.jpg");
+	//Picture beach = new Picture("beach.jpg");
+	Picture redMotorcycle = new Picture("redMotorcycle.jpg");
    // water.explore();
 	//beach.explore();
-	caterpillar.explore();
+	redMotorcycle.explore();
 	//beach.zeroBlue();
     //beach.keepOnlyBlue();
 	//beach.Negate();
 	//beach.grayscale();
 	//water.fixUnderwater();
-	caterpillar.mirrorVerticalRightToLeft();
+	//redMotorcycle.mirrorVerticalRightToLeft();
+	//redMotorcycle.mirrorHorizontal();
+	//redMotorcycle.mirrorHorizontalBotToTop();
+	redMotorcycle.mirrorDiagonal();
     //water.explore();
 	//beach.explore()
-	caterpillar.explore();
+	redMotorcycle.explore();
 	
   }
   
