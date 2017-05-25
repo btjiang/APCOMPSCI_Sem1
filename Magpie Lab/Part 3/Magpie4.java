@@ -36,6 +36,17 @@ public class Magpie4
 			response = "Tell me more about your family.";
 		}
 		
+		else if(findKeyword(statement, "cat")>= 0||findKeyword(statement, "dog") >= 0
+			||findKeyword(statement, "fish") >= 0||findKeyword(statement, "turtle")>= 0)
+			{
+				response = "Tell me more about your pet";
+			}
+			
+		else if(findKeyword(statement, "Robinette")>= 0)
+		{
+			response = "He sounds like a pretty dank teacher";
+		}
+		
 		else if (findKeyword(statement, "I want to", 0) >= 0)
 		{
 			response = transformIWantToStatement(statement);
