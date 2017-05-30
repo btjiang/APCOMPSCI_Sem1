@@ -17,55 +17,17 @@ public class AI
 		return "I'll go first."
 	}
 	
-	public String AttackResponse(String input)
-	{
-		String input = "";
-		input = input.trim();
-		System.out.println(Guess point);
-		if (input = one of the array numbers)
-		{
-			return "Hit!!"; 
-		}
-		
-		else 
-		{
-			return "Miss";
-		}
-		
-	}
-	
-	public String Attack(int ship)
-	{
-		int ship = 1 + (int)(Math.random()*99);
-		System.out.println("Attack" + ship);
-		Scanner kb = new Scanner(System.in);
-		String response = kb.nextLine();
-		response = response.trim.toLowerCase();
-		if (response.equals("hit"))
-		{
-			health -=health;
-			return "Oh no!";
-		}
-		
-		else
-		{
-			return "Yay!";
-		}
-		
-	}
-	
 	public LoadOppShips()
 	{
 		int [] OppShips = 1 + (int)(Math.random()*99);
 	}
-	
 	
 	public static String takeDamage(int damage, int amount)
 	{
 		if(damage == 1)
 		{
 			healthCount -= amount;
-			return "Taking " + amount + " damage!";
+			//return "Taking " + amount + " damage!";
 		}
 		else
 		{
@@ -79,7 +41,7 @@ public class AI
 			}
 			
 		}
-		return "Power up " + amount;
+		//return "Power up " + amount;
 	}
 	
 	public static void printClip()
@@ -106,6 +68,14 @@ public class AI
 	public String getResponse(String statement)
 	{
 		
+		String response = "";
+		response = response.trim();
+		if (statement.length() == 0)
+		{
+			return "Hello?";
+		}
+		
+		else if ()
 		return response;
 	}
 	
