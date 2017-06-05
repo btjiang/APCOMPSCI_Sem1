@@ -65,6 +65,21 @@ public class PictureTester
     temple.mirrorTemple();
     temple.explore();
   }
+	
+ public static void testMirrorArms()
+  {
+	  Picture snow = new Picture("snowman.jpg");
+	  snow.explore();
+	  snow.mirrorArms();
+	  snow.explore();
+  }
+  public static void testMirrorGull()
+  {
+	Picture gull = new Picture("seagull.jpg");
+    gull.explore();
+    gull.mirrorGull();
+    gull.explore();
+  }
   public static void testkeepOnlyBlue()
   {
 	  Picture beach = new Picture("beach.jpg");
