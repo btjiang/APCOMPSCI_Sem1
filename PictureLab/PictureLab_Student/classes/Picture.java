@@ -285,9 +285,9 @@ public class Picture extends SimplePicture
    
     Pixel[][] pixels = this.getPixels2D();
     
-    for (int row = 163; row < mirrorPoint; row++)
+    for (int row = 158; row < mirrorPoint; row++)
     {
-      for (int col = 112; col < 168; col++)
+      for (int col = 104; col < 170; col++)
       {
       
         upPixel = pixels[row][col];      
@@ -296,6 +296,25 @@ public class Picture extends SimplePicture
       }
     }
   }
+  
+   public void mirrorGull()
+  {
+    int mirrorPoint = 345;
+    Pixel rightPixel = null;
+    Pixel leftPixel = null;
+    Pixel[][] pixels = this.getPixels2D();   
+     
+    for (int row = 235; row < 323; row++)
+    {
+      for (int col = 238; col < mirrorPoint; col++)
+     {
+        rightPixel = pixels[row][col];      
+        leftPixel = pixels[row][mirrorPoint - col + mirrorPoint/3];
+        leftPixel.setColor(rightPixel.getColor());
+      }
+    }
+  }
+
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the
     * current picture
@@ -327,6 +346,34 @@ public class Picture extends SimplePicture
     }   
   }
 
+  public void copy(Picture fromPic, int fromRowStart,  
+										int awayColStart,
+										int awayRowEnd, 
+										int awayColEnd,
+										int toRow,
+										int toCol)
+  {
+    Pixel awayPixel = null;
+    Pixel toPixel = null;
+    Pixel[][] toPixel = this.getPixels2D();
+    Pixel[][] awayPixel = fromPic.getPixels2D();
+	
+	System.out.println(toPixel.length);
+	System.out.println(awayPixel.length);
+    for (int awayRow = awayRowStart; 
+			awayRow <= awayRowEnd && toRow < toPixels.length; 
+			awayRow++, toRow++)
+    {
+      for (int awayCol = awayColStart; 
+				awayCol < awayColEnd && toCol < toPixels[toRow].length; 
+				awayCol++, toCol++)  
+      {
+        awayPixel = awayPixels[awayRow][awayCol];
+        toPixel = toPixels[toRow][toCol];
+        toPixel.setColor(awayPixel.getColor());
+      }
+    } 
+  }
   /** Method to create a collage of several pictures */
   public void createCollage()
   {
