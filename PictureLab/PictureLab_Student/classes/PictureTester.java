@@ -9,38 +9,38 @@
 public class PictureTester
 {
   /** Method to test zeroBlue */
-  //public static void testZeroBlue()
-  //{
-  //  Picture beach = new Picture("beach.jpg");
-   // beach.explore();
-  //  beach.zeroBlue();
-  //  beach.explore();
-  //}
+  public static void testZeroBlue()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.zeroBlue();
+    beach.explore();
+  }
   
   /** Method to test mirrorVertical */
- // public static void testMirrorVertical()
-//  {
-//    Picture redMotorcycle = new Picture("redMotorcycle.jpg");
- //   redMotorcycle.explore();
- //   redMotorcycle.mirrorVertical();
- //   redMotorcycle.explore();
- // }
+  public static void testMirrorVertical()
+  {
+    Picture redMotorcycle = new Picture("redMotorcycle.jpg");
+    redMotorcycle.explore();
+    redMotorcycle.mirrorVertical();
+    redMotorcycle.explore();
+  }
   
- //  public static void testMirrorVerticalRightToLeft()
-//  {
-//    Picture redMotorcycle = new Picture("redMotorcycle.jpg");
- //   redMotorcycle.explore();
- //   redMotorcycle.mirrorVerticalRightToLeft();
- //   redMotorcycle.explore();
-//  }
+   public static void testMirrorVerticalRightToLeft()
+  {
+    Picture redMotorcycle = new Picture("redMotorcycle.jpg");
+    redMotorcycle.explore();
+    redMotorcycle.mirrorVerticalRightToLeft();
+    redMotorcycle.explore();
+  }
   
-// public static void testMirrorHorizontal()
-//  {
-//    Picture redMotorcycle = new Picture("redMotorcycle.jpg");
- //   redMotorcycle.explore();
-//    redMotorcycle.mirrorHorizontal();
- //   redMotorcycle.explore();
-//  }
+ public static void testMirrorHorizontal()
+  {
+    Picture redMotorcycle = new Picture("redMotorcycle.jpg");
+    redMotorcycle.explore();
+    redMotorcycle.mirrorHorizontal();
+    redMotorcycle.explore();
+  }
   
     public static void testMirrorHorizontalBotToTop()
   {
@@ -73,32 +73,39 @@ public class PictureTester
 	  beach.explore();
   }
   
- // public static void testNegate()
-  //{
-	//  Picture beach = new Picture("beach.jpg");
-//	  beach.explore();
-	//  beach.Negate();
-//	  beach.explore();
-  //}
+  public static void testNegate()
+  {
+	  Picture beach = new Picture("beach.jpg");
+	  beach.explore();
+	  beach.Negate();
+	  beach.explore();
+  }
   
- // public static void testgrayscale()
-  //{
-//	   Picture beach = new Picture("beach.jpg");
-//	  beach.explore();
-//	  beach.grayscale();
-	//  beach.explore();
-  //}
+  public static void testgrayscale()
+  {
+	   Picture beach = new Picture("beach.jpg");
+	  beach.explore();
+	  beach.grayscale();
+	  beach.explore();
+  }
   
    
-//    public static void testfixUnderwater()
-//  {
-//	   Picture water = new Picture("water.jpg");
-//	  beach.explore();
-//	  beach.fixUnderwater();
-//	  beach.explore();
-//  }
+    public static void testfixUnderwater()
+  {
+		Picture water = new Picture("water.jpg");
+	  water.explore();
+	  water.fixUnderwater();
+	  water.explore();
+  }
   /** Method to test the collage method */
   public static void testCollage()
+  {
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.createCollage();
+    canvas.explore();
+  }
+  
+    public static void testmyCollage()
   {
     Picture canvas = new Picture("640x480.jpg");
     canvas.createCollage();
@@ -131,11 +138,12 @@ public class PictureTester
 	//testMirrorVerticalRightToLeft();
 	//testMirrorHorizontal();
 	//testMirrorHorizontalBotToTop();
-    testMirrorTemple();
+    //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
+	testmyCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();

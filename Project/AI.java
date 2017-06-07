@@ -7,19 +7,24 @@ public class AI
 	static int healthload = 6;
 	static int healthCount;
 	
-	public Hello()
+	
+	public String Hello()
 	{
 		return "Hello, welcome to Battleship";
 	}
 	
-	public initiate()
+	public String initiate()
 	{
-		return "I'll go first."
+		return "I'll go first.";
 	}
 	
-	public LoadOppShips()
+	public int[] LoadOppShips()
 	{
-		int [] OppShips = 1 + (int)(Math.random()*99);
+		int [] OppShips = new int[100];
+		for(int i = 0; i < OppShips.length; i++)
+		{
+			OppShips[i] = 1 + (int)(Math.random()*99);
+		}
 	}
 	
 	public static String takeDamage(int damage, int amount)
@@ -67,15 +72,22 @@ public class AI
 	
 	public String getResponse(String statement)
 	{
+		Scanner kb = new Scanner(System.in);
 		
 		String response = "";
 		response = response.trim();
-		if (statement.length() == 0)
+		AttackPhrase();
+		if(statement.equals("hit"))
+		
 		{
-			return "Hello?";
+			HitResponse();
+		}
+	
+		else 
+		{
+			MissResponse();
 		}
 		
-		else if ()
 		return response;
 	}
 	
@@ -135,5 +147,7 @@ public class AI
 
 		return response;
 	}
+	
+}
 	
 	

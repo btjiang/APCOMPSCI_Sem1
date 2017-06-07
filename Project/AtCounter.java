@@ -38,7 +38,7 @@ public class AtCounter
 		while (r < 10 && c < 10 && atGrid[r][c].equals("@"))
 		{
 			atGrid[r][c] = "-";
-			countAts([r + 1], [c + 1]) + 1;
+			return countAts([r + 1], [c + 1]) + 1;
 		}
 	}
     /**==========================================

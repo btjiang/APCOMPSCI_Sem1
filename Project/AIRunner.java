@@ -11,7 +11,10 @@ public class AIRunner
 		System.out.println(battle.inititate());
 		Scanner ship = new Scanner (System.in);
 		String guess = ship.nextLine();
-		
+		LoadOppShips();
+		takeDamage();
+		printClip();
+		getResponse();
 		
 		while (!statement.equals("Game Over"))
 		{
